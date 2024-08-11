@@ -11,8 +11,7 @@ export default function FlipCard(
     return <ReactCardFlip  isFlipped={flipped} flipDirection="horizontal">
     <div onClick={()=>{
         setFlipped(true)
-    }} className="h-96 w-80 flex rounded-lg backdrop-blur-md text-white bg-white/20 shadow-sm justify-center items-center">
-
+    }} className="h-96 w-80 flex rounded-lg backdrop-blur-md text-white bg-white/30 shadow-sm justify-center items-center">
         {props.question}
     </div>
     <div onClick={()=>{

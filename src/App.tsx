@@ -7,13 +7,11 @@ export default function App() {
   const queryClient = new QueryClient()
   return (
     <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<Adminpage></Adminpage>} />
       </Routes>
-    </BrowserRouter>
     </QueryClientProvider>
   )
 }
