@@ -1,6 +1,6 @@
 import AdminCard from "@/components/cards/admincard"
 import { Button } from "@/components/ui/button"
-import { useMutation, useQuery } from "@tanstack/react-query"
+import { useQuery } from "@tanstack/react-query"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import Cookies from "universal-cookie"
