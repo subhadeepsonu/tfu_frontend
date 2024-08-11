@@ -24,7 +24,7 @@ export default function Adminpage(){
     const QueryCards = useQuery({
         queryKey:["cards"],
         queryFn:async()=>{
-            const response = await axios.get("http://localhost:3000/flashcard",)
+            const response = await axios.get(`http://13.201.137.42:3000/flashcard`,)
             return response.data
         }
     })

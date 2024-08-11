@@ -18,7 +18,11 @@ import { toast } from "sonner"
 import { useNavigate } from "react-router-dom"
 export default function LoginPage(){
     const cookie = new Cookies()
+    const token = cookie.get("token")
     const navigate = useNavigate();
+    if(token){
+        navigate("/admin")
+    }
     const schema = z.object({
         username: z.string().min(3),
         password: z.string().min(8),
@@ -29,7 +33,7 @@ export default function LoginPage(){
     const values = form.getValues()
     const MutateLogin = useMutation({
         mutationFn:async ()=>{
-            const response = await axios.post("http://localhost:3000/login",{
+            const response = await axios.post(`http://13.201.137.42:3000/login`,{
                 username: values.username,
                 password: values.password
             })

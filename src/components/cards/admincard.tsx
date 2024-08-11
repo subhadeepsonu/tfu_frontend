@@ -22,7 +22,7 @@ export default function AdminCard(props:{
     const queryClient = useQueryClient()
     const MuatateDelete = useMutation({
         mutationFn:async ()=>{
-            const responce = await axios.delete("http://localhost:3000/flashcard",{
+            const responce = await axios.delete(`http://13.201.137.42:3000/flashcard`,{
                 headers:{
                     Authorization:token
                 },

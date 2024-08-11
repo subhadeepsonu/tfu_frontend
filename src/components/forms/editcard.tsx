@@ -33,7 +33,7 @@ export default function EditCard(props:{
     const MutateAddCard = useMutation({
         mutationFn:async()=>{
           console.log(values)
-            const response = await axios.put("http://localhost:3000/flashcard",{
+            const response = await axios.put(`http://13.201.137.42:3000/flashcard`,{
                 id:props.id,
                 title:form.getValues("title"),
                 description:form.getValues("description")

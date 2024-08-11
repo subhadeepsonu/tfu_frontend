@@ -21,6 +21,5 @@ export default function Navbar(){
             navigate("/login")
         }} variant={"secondary"}>Admin Login</Button>}
        </div>
-        
     </div>
 }

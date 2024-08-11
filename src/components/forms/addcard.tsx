@@ -29,7 +29,7 @@ export default function AddCard() {
     })
     const MutateAddCard = useMutation({
         mutationFn:async()=>{
-            const response = await axios.post("http://localhost:3000/flashcard",{
+            const response = await axios.post(`http://13.201.137.42:3000/flashcard`,{
                 title:form.getValues("title"),
                 description:form.getValues("description")
             }, {
