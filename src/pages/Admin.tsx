@@ -36,9 +36,9 @@ export default function Adminpage(){
         return <div>Error</div>
     }
     return (    
-        <div className="flex flex-col items-center justify-start pt-20 w-full h-screen bg-gray-800">
+        <div className="flex flex-col items-center justify-start pt-20 w-full min-h-screen bg-gray-800">
             <Sheet>
-            <SheetTrigger><Button variant={"secondary"} className="fixed bottom-5 right-5">Add Card</Button></SheetTrigger>
+            <SheetTrigger><Button variant={"secondary"}  className="fixed z-10 bottom-5 right-5">Add Card</Button></SheetTrigger>
             <SheetContent>
                  <SheetHeader>
                       <SheetTitle>Add cards</SheetTitle>
@@ -49,7 +49,7 @@ export default function Adminpage(){
              </SheetContent>
             </Sheet>
             
-           <div className="grid grid-cols-4 gap-5">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:frid-cols-4 gap-5">
                {QueryCards.data.message.map((card:any)=>{
                 return <AdminCard id={card.id} key={card.id} question={card.title} answer={card.description}></AdminCard>
                })}

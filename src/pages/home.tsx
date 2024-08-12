@@ -25,7 +25,7 @@ export default function HomePage(){
     if(QueryFlashCards.data){
     return (    
         <div className="flex flex-col items-center justify-center w-full h-screen" style={{ backgroundImage: "url('https://utfs.io/f/c1f3b2de-d101-4709-b5dc-db30c29487ef-qqbpro.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-            <Carousel className="w-[500px]"
+            <Carousel className="md:w-[500px] w-[180px]"
             opts={{
                 loop:true,
             }}

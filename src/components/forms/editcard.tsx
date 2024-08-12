@@ -62,7 +62,7 @@ export default function EditCard(props:{
             <FormItem>
               <FormLabel>Question</FormLabel>
               <FormControl>
-                <Input className="w-80" placeholder="Question" {...field} />
+                <Input className="w-60 md:w-80 " placeholder="Question" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -75,7 +75,7 @@ export default function EditCard(props:{
             <FormItem>
               <FormLabel>Answer</FormLabel>
               <FormControl>
-                <Input className="w-80"  placeholder="Answer" {...field} />
+                <Input className="w-60 md:w-80 "  placeholder="Answer" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

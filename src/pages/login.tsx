@@ -54,7 +54,7 @@ export default function LoginPage(){
     return (    
         <div className="flex flex-col items-center justify-center w-full h-screen"
         style={{ backgroundImage: "url('https://utfs.io/f/c1f3b2de-d101-4709-b5dc-db30c29487ef-qqbpro.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-           <div className="h-96 w-96 backdrop-blur-sm bg-white/15 rounded-lg p-2">
+           <div className="h-96 w-80 backdrop-blur-sm bg-white/15 rounded-lg p-2">
            <p className="flex justify-center items-center font-medium  text-2xl">Login</p>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(()=>{
@@ -68,7 +68,7 @@ export default function LoginPage(){
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input className="w-80" placeholder="admin123" {...field} />
+                <Input className="w-72" placeholder="admin123" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -81,7 +81,7 @@ export default function LoginPage(){
             <FormItem>
               <FormLabel>password</FormLabel>
               <FormControl>
-                <Input className="w-80" type="password" placeholder="TFUROUND1" {...field} />
+                <Input className="w-72" type="password" placeholder="TFUROUND1" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
