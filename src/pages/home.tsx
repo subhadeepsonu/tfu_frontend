@@ -25,20 +25,21 @@ export default function HomePage(){
     if(QueryFlashCards.data){
     return (    
         <div className="flex flex-col items-center justify-center w-full h-screen" style={{ backgroundImage: "url('https://utfs.io/f/c1f3b2de-d101-4709-b5dc-db30c29487ef-qqbpro.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-            <Carousel
+            <Carousel className="w-[500px]"
             opts={{
                 loop:true,
             }}
             >
             <CarouselPrevious>Previous</CarouselPrevious>
-                <CarouselContent >
+                <CarouselContent>
                     {QueryFlashCards.data.message.map((flashcard:any)=>{
                         return (
-                            <CarouselItem key={flashcard.id}>
+                            <CarouselItem key={flashcard.id} className="basic-1/4" >
                                 <div className="flex justify-center items-center">
                                 <FlipCard answer={flashcard.description} question={flashcard.title}></FlipCard>
                                 </div>
                             </CarouselItem>
+                            
                         )
                     })}
                 </CarouselContent>
